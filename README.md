@@ -123,7 +123,7 @@ This section describes only the most important output files.
 
 This pipeline was originally written by Daniel Straub ([@d4straub](https://github.com/d4straub)) for use at the [Quantitative Biology Center (QBiC)](http://www.qbic.life).
 
-Code was inspired by nf-core/ampliseq (doi: 10.5281/zenodo.1493841) ([Straub et al., 2020](https://doi.org/10.3389/fmicb.2020.550420)) of the nf-core collection of workflows ([Ewels et al., 2020](https://dx.doi.org/10.1038/s41587-020-0439-x)).
+Code was inspired by [nf-core/ampliseq](https://nf-co.re/ampliseq) (doi: 10.5281/zenodo.1493841) ([Straub et al., 2020](https://doi.org/10.3389/fmicb.2020.550420)) of the [nf-core](https://nf-co.re) collection of workflows ([Ewels et al., 2020](https://dx.doi.org/10.1038/s41587-020-0439-x)).
 
 ## Citations
 
