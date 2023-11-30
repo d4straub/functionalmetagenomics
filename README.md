@@ -88,9 +88,42 @@ Additional parameters are
 - `--stop_metaphlan` -> stop before MetaPhlAn step (i.e. QC and preprocessing)
 - `--stop_humann` --> stop before HUMAnN (i.e. only QC, preprocessing, and taxonomic community profiling)
 
+## Output
+
+This section describes only the most important output files.
+
+[MultiQC](http://multiqc.info) is a visualization tool that generates a single HTML report summarising all samples in your project. Most of the pipeline QC results are visualised in the report and further statistics are available in the report data directory.
+
+- `multiqc/`
+  - `multiqc_report.html`: a standalone HTML file that can be viewed in your web browser.
+
+[KneadData](https://huttenhower.sph.harvard.edu/kneaddata/) is a tool designed to perform quality control on metagenomic sequencing data.
+
+- `kneaddata/`
+  - `kneaddata_read_count_table.tsv`:tab-separated file with read counts during read filtering for all samples
+ 
+[MetaPhlAn](https://huttenhower.sph.harvard.edu/metaphlan/) is a computational tool for profiling the composition of microbial communities.
+
+- `metaphlan/`
+  - `merged_profiles.txt`: tab-separated file with taxa and abundances for all samples
+
+[HUMAnN3](https://huttenhower.sph.harvard.edu/humann/) is a method for efficiently and accurately profiling the abundance of microbial metabolic pathways and other molecular functions. For more details on what each file contains, refer to the manual of HUMAnN3.
+
+- `humann/`
+  - `0_joined_raw`: tables incuding all samples, direct output of HUMAnN
+    - `humann_genefamilies.tsv.gz`: functional annotations and their abundances
+    - `humann_pathabundance.tsv.gz`: pathway abundances
+    - `humann_pathcoverage.tsv.gz`: pathway coverage
+  - `4_final`: normalized (CPM), summarized, and named tables incuding all samples, stratified (per taxa) or unstratified (taxa independent)
+    - `genefamilies_rename_{stratified/unstratified}.tsv.gz`: functional annotations and their abundances
+    - `pathabundance_renorm_{stratified/unstratified}.tsv.gz`: pathway abundances
+    - `humann_pathcoverage_{stratified/unstratified}.tsv.gz`: pathway coverage
+
 ## Credits
 
 This pipeline was originally written by Daniel Straub ([@d4straub](https://github.com/d4straub)) for use at the [Quantitative Biology Center (QBiC)](http://www.qbic.life).
+
+Code was inspired by nf-core/ampliseq (doi: 10.5281/zenodo.1493841) ([Straub et al., 2020](https://doi.org/10.3389/fmicb.2020.550420)) of the nf-core collection of workflows ([Ewels et al., 2020](https://dx.doi.org/10.1038/s41587-020-0439-x)).
 
 ## Citations
 
