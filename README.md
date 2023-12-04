@@ -83,10 +83,13 @@ If re-grouping to KO is desired, append to the upper command:
 ```
 
 Additional parameters are
-- `--skip_fastqc` -> skip QC = FastQC & MultiQC
-- `--stop_kneaddata` -> stop before KneadData step (i.e. only QC = FastQC & MultiQC)
-- `--stop_metaphlan` -> stop before MetaPhlAn step (i.e. QC and preprocessing)
-- `--stop_humann` --> stop before HUMAnN (i.e. only QC, preprocessing, and taxonomic community profiling)
+- `--skip_fastqc`: skip QC = FastQC & MultiQC
+- `--stop_kneaddata`: stop before KneadData step (i.e. only QC = FastQC & MultiQC)
+- `--stop_metaphlan`: stop before MetaPhlAn step (i.e. QC and preprocessing)
+- `--stop_humann`: stop before HUMAnN (i.e. only QC, preprocessing, and taxonomic community profiling)
+- `--max_memory`: maximum RAM allowed per process, to scale to computational resources at hand (default: `1992.GB`)
+- `--max_cpus`: number of maximum cpus per process, to scale to computational resources at hand (default: `128`)
+- `--max_time`: maximum time allowed per process, to scale to computational resources at hand  (default: `168.h`)
 
 ## Output
 
